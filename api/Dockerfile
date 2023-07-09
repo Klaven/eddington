@@ -15,4 +15,3 @@ RUN apt-get install -y libssl-dev
 RUN rm -rf /var/lib/apt/lists/*
 COPY --from=builder /app/api /app/api
 CMD ["/app/api"]
-
