@@ -59,9 +59,7 @@ func (app *OryApp) SessionMiddleware() gin.HandlerFunc {
 		ctx := withCookies(c.Request.Context(), cookies)
 		_ = withSession(ctx, session)
 
-		// continue to the requested page (in our case the Dashboard)
+		// continue to the requested page
 		c.Next()
-		//next.ServeHTTP(c.Writer, c.Request.WithContext(ctx))
-		//return
 	}
 }
